@@ -18,6 +18,16 @@ Part of a larger project: an AI government-communication suite (content engine, 
 - **LLM judge** (accuracy, tone, language) with its own validation tooling.
 - **Evaluation tooling:** blind hand-scoring page, judge-vs-human agreement report, and a re-judging experiment.
 
+## Example run
+
+![Summary of automatic checks, v1 vs v5](docs/summary.png)
+
+*v1 invents places, numbers and contact details; v5 stays within the facts. Note: v1's template has no institution variable.*
+
+![Side-by-side Arabic outputs for the fee-deadline notice](docs/compare.png)
+
+*The same fee-deadline notice from v1 (left) and v5 (right).*
+
 ## Setup
 
 ```bash
