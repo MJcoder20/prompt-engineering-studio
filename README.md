@@ -26,7 +26,7 @@ Part of a larger project: an AI government-communication suite (content engine, 
 
 ![Side-by-side Arabic outputs for the fee-deadline notice](docs/compare.png)
 
-*The same fee-deadline notice from v1 (left) and v5 (right).*
+*The same fee-deadline notice from v5 (left) and v1 (right).*
 
 ## Setup
 
