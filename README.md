@@ -86,6 +86,8 @@ python run_engine.py --demo                 # three sample briefs
 python eval_engine.py                       # 12 fictional briefs x 3 runs
 ```
 
+**Human approval:** `streamlit run approval_app.py` opens a review page. Generated drafts enter a queue as `pending`; a named reviewer can edit, approve or reject them. Rules enforced in the storage layer: a reviewer name is required, rejections need a reason, approving with open check issues needs an override note, and decisions are final. Every decision is logged with a timestamp and exportable as CSV.
+
 **Evaluation** (Qwen 2.5 7B, 12 fictional briefs, 36 runs per configuration; "pass" means the automatic checks pass, not that the text is correct, so a human must review every draft):
 
 | | First-attempt pass | After retries | Mean attempts |
