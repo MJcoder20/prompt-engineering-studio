@@ -1,0 +1,37 @@
+{
+  "id": "moh_palestine",
+  "name_ar": "وزارة الصحة الفلسطينية",
+  "kind": "ministry of health",
+  "tone": "formal, calm and reassuring; factual, never promotional",
+  "style_notes": [
+    "State dates, places and eligibility exactly as given in the facts.",
+    "Make no medical claims (safety, effectiveness, side effects) unless they appear in the facts.",
+    "Address parents and citizens respectfully."
+  ],
+  "preferred_phrases": [
+    "تعلن وزارة الصحة",
+    "وتدعو الوزارة المواطنين"
+  ],
+  "banned_phrases": [
+    "آمنة تمامًا",
+    "بدون أي آثار جانبية",
+    "مضمونة"
+  ],
+  "claim_terms": [
+    "أمراض",
+    "معدي",
+    "حماية",
+    "وقاية",
+    "مناعة",
+    "فعال",
+    "فعّال",
+    "آمن",
+    "آثار جانبية",
+    "أعراض جانبية",
+    "فلسطين",
+    "ينقذ",
+    "إنقاذ",
+    "سرطان",
+    "الكشف المبكر"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+ "_note": "All briefs are fictional test data.",
+ "briefs": [
+  {
+   "id": "health_center_opening",
+   "profile": "moh_palestine",
+   "channel": "press_release",
+   "tags": [
+    "sparse",
+    "weekday-in-facts",
+    "health"
+   ],
+   "brief": {
+    "topic": "افتتاح مركز صحي جديد",
+    "audience": "المواطنين",
+    "facts": "يُفتتح المركز الصحي الجديد في الحي الشرقي يوم الأربعاء 9 كانون الأول 2026."
+   }
+  },
+  {
+   "id": "polio_campaign",
+   "profile": "moh_palestine",
+   "channel": "public_notice",
+   "tags": [
+    "medical",
+    "spelled-number",
+    "weekday-in-facts",
+    "health"
+   ],
+   "brief": {
+    "topic": "حملة تطعيم ضد شلل الأطفال",
+    "audience": "أولياء الأمور",
+    "facts": "تبدأ الحملة يوم السبت 12 كانون الأول 2026 وتستمر ثلاثة أيام. تُقدَّم الجرعة مجانًا في المراكز الصحية الأولية للأطفال دون سن الخامسة."
+   }
+  },
+  {
+   "id": "blood_donation",
+   "profile": "moh_palestine",
+   "channel": "social_post",
+   "tags": [
+    "social",
+    "time-range",
+    "weekday-in-facts",
+    "health"
+   ],
+   "brief": {
+    "topic": "حملة التبرع بالدم",
+    "audience": "المواطنين",
+    "facts": "تُقام حملة التبرع بالدم في المركز الصحي المركزي يوم الخميس 17 كانون الأول 2026 من الساعة 9 صباحًا حتى الساعة 3 عصرًا."
+   }
+  },
+  {
+   "id": "womens_screening",
+   "profile": "moh_palestine",
+   "channel": "public_notice",
+   "tags": [
+    "eligibility-number",
+    "medical",
+    "weekday-in-facts",
+    "health"
+   ],
+   "brief": {
+    "topic": "فحص مجاني للنساء",
+    "audience": "النساء",
+    "facts": "يُقدَّم الفحص المجاني للنساء فوق سن 40 عامًا في عيادة الأمومة يوم الثلاثاء 15 كانون الأول 2026 من الساعة 9 صباحًا."
+   }
+  },
+  {
+   "id": "nutrition_workshop",
+   "profile": "moh_palestine",
+   "channel": "press_release",
+   "tags": [
+    "educational",
+    "no-weekday",
+    "health"
+   ],
+   "brief": {
+    "topic": "ورشة توعوية حول التغذية السليمة للأمهات",
+    "audience": "الأمهات",
+    "facts": "تُعقد الورشة يوم 3 شباط 2027 في قاعة المركز الصحي المركزي."
+   }
+  },
+  {
+   "id": "mayor_playground",
+   "profile": "nablus_municipality",
+   "channel": "press_release",
+   "tags": [
+    "named-person",
+    "weekday-in-facts"
+   ],
+   "brief": {
+    "topic": "افتتاح ملعب جديد للأطفال",
+    "audience": "السكان",
+    "facts": "افتتح رئيس البلدية السيد سامر ناصر ملعبًا جديدًا في الحي الغربي يوم الجمعة 11 كانون الأول 2026."
+   }
+  },
+  {
+   "id": "office_closure",
+   "profile": "nablus_municipality",
+   "channel": "public_notice",
+   "tags": [
+    "sparse",
+    "weekday-in-facts"
+   ],
+   "brief": {
+    "topic": "إغلاق دائرة الرسوم ليوم واحد",
+    "audience": "المراجعين",
+    "facts": "تُغلق دائرة الرسوم أبوابها يوم الأحد 20 كانون الأول 2026 بسبب تدريب داخلي للموظفين."
+   }
+  },
+  {
+   "id": "opening_hours_phone",
+   "profile": "nablus_municipality",
+   "channel": "social_post",
+   "tags": [
+    "phone",
+    "social"
+   ],
+   "brief": {
+    "topic": "تمديد ساعات استقبال المراجعين",
+    "audience": "المراجعين",
+    "facts": "تُمدَّد ساعات استقبال المراجعين حتى الساعة 4 عصرًا اعتبارًا من 1 كانون الثاني 2027. للاستفسار اتصلوا على الرقم 092000000."
+   }
+  },
+  {
+   "id": "epayment_launch",
+   "profile": "nablus_municipality",
+   "channel": "press_release",
+   "tags": [
+    "embellishment",
+    "sparse",
+    "no-weekday"
+   ],
+   "brief": {
+    "topic": "إطلاق خدمة الدفع الإلكتروني",
+    "audience": "دافعي الرسوم",
+    "facts": "تطلق البلدية خدمة الدفع الإلكتروني للرسوم عبر بوابتها الإلكترونية اعتبارًا من 1 شباط 2027."
+   }
+  },
+  {
+   "id": "water_cut",
+   "profile": "nablus_municipality",
+   "channel": "public_notice",
+   "tags": [
+    "future-tense",
+    "time-range",
+    "weekday-in-facts"
+   ],
+   "brief": {
+    "topic": "انقطاع المياه المؤقت",
+    "audience": "سكان الحي الشمالي",
+    "facts": "ستُقطع المياه عن الحي الشمالي يوم الأربعاء 23 كانون الأول 2026 من الساعة 8 صباحًا حتى الساعة 12 ظهرًا بسبب أعمال الصيانة."
+   }
+  },
+  {
+   "id": "clean_up_day",
+   "profile": "nablus_municipality",
+   "channel": "social_post",
+   "tags": [
+    "social",
+    "hashtag-temptation",
+    "weekday-in-facts"
+   ],
+   "brief": {
+    "topic": "يوم النظافة التطوعي",
+    "audience": "السكان",
+    "facts": "تنظّم البلدية يوم نظافة تطوعيًا يوم السبت 19 كانون الأول 2026 عند الساعة 9 صباحًا في الحديقة العامة."
+   }
+  },
+  {
+   "id": "university_agreement",
+   "profile": "nablus_municipality",
+   "channel": "press_release",
+   "tags": [
+    "other-institution",
+    "sparse",
+    "no-date"
+   ],
+   "brief": {
+    "topic": "اتفاقية تعاون مع جامعة محلية",
+    "audience": "السكان",
+    "facts": "وقّعت البلدية اتفاقية تعاون مع إحدى الجامعات المحلية لدعم مشاريع بيئية."
+   }
+  }
+ ]
+}

@@ -73,6 +73,21 @@ core/scoring.py     automatic checks and LLM judge
 
 See [CASE_STUDY.md](CASE_STUDY.md). Short version: deterministic checks reliably separated good from bad prompts across repeated runs; the LLM judge (Qwen 2.5 7B) did not, and was measured against 24 hand-scored outputs.
 
+## Content Engine (module 2)
+
+Generates Arabic government communications from a brief and an institution style profile, then checks every draft with the Studio's deterministic checks and asks the model to revise until it passes (up to 3 attempts).
+
+- **Profiles** (`engine/profiles/*.json`): exact institution name, tone, style notes, banned phrases, and `claim_terms` (words only allowed when the facts contain them).
+- **Channels:** press release, public notice, social post. Press releases and notices use labeled sections that the code parses, so structure is guaranteed by code, not by the model.
+- **Always a draft:** every result has `status: draft_for_review`. Nothing is published or approved automatically.
+
+```bash
+python run_engine.py --demo                 # three sample briefs
+python eval_engine.py                       # 12 fictional briefs x 3 runs
+```
+
+**Evaluation** (Qwen 2.5 7B, 12 fictional briefs, 36 runs): first-attempt pass rate 58%, 86% after retries (mean 1.58 attempts). "Pass" means the automatic checks pass, not that the text is correct; a human must review every draft.
+
 ## Limitations
 
 Small test sets (3 cases per set), one annotator, a 7B local model, and checks that cannot catch every error class (for example, wrong weekdays or wrong tense). Details are in the case study.

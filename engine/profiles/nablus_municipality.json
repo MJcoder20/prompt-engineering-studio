@@ -1,0 +1,23 @@
+{
+  "id": "nablus_municipality",
+  "name_ar": "بلدية نابلس",
+  "kind": "municipality",
+  "tone": "clear, practical and courteous; a brief apology when a service is disrupted",
+  "style_notes": [
+    "Give times, streets and alternatives exactly as in the facts.",
+    "Do not invent contact details, websites or office names."
+  ],
+  "preferred_phrases": [
+    "تعلن بلدية نابلس",
+    "نعتذر عن أي إزعاج"
+  ],
+  "banned_phrases": [
+    "الإدارة الحضرية",
+    "الإمارة"
+  ],
+  "claim_terms": [
+    "تحسين",
+    "جودة",
+    "أفضل"
+  ]
+}
