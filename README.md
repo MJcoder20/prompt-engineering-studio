@@ -1,6 +1,6 @@
-# Prompt Engineering Studio
+# Prompt Engineering Studio + Content Engine
 
-A small tool for building and **testing** prompts for Arabic government communications (press releases, public notices). It runs fully local with open models, so no text leaves your machine.
+A prompt-testing tool and a draft generator for Arabic government communications. The Studio compares prompt versions with deterministic checks and a validated LLM judge; the Content Engine drafts press releases, notices and posts from institution style profiles and revises each draft until it passes the same checks. Everything runs locally on an open model (Qwen 2.5 7B via Ollama), and every output is a draft for human review.
 
 Part of a larger project: an AI government-communication suite (content engine, optimization, media intelligence, campaign agent). This repo is module 1: the testing and evaluation layer the other modules rely on.
 
