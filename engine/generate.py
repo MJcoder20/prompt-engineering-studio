@@ -27,11 +27,13 @@ CHANNELS = {
     },
     "public_notice": {
         "min_words": 20, "max_words": 80, "headline": True, "min_lines": 2, "sections": ["العنوان", "النص"],
-        "instructions": "A one-line headline, then 2 to 3 sentences with the key facts and any action required.",
+        "instructions": ("A one-line headline, then 2 to 3 sentences with the key facts and any action required. "
+                         "The first sentence names the institution."),
     },
     "social_post": {
         "min_words": 10, "max_words": 50, "headline": False, "min_lines": 1, "sections": [],
-        "instructions": "One short post of 2 to 3 sentences with the key fact first. No hashtags, no emojis.",
+        "instructions": ("One short post: begin with the institution name followed by a colon, then the key fact in 2 to 3 "
+                         "short sentences. No hashtags, no emojis."),
     },
 }
 REQUIRED_PROFILE_KEYS = ["id", "name_ar", "kind", "tone", "style_notes", "preferred_phrases", "banned_phrases"]
@@ -115,7 +117,7 @@ def check(text, profile, brief, channel, structure=True):
     if not s["length_ok"]:
         issues.append(f"length must be {ch['min_words']} to {ch['max_words']} words (it has {s['words']})")
     if profile["name_ar"] not in text:
-        issues.append(f"does not name the institution exactly as given: {profile['name_ar']}")
+        issues.append(f"the text must name the institution exactly as given ({profile['name_ar']}); begin the first sentence with it")
     if PLACEHOLDER_RE.search(text):
         issues.append("contains a placeholder in square brackets; leave missing details out instead")
     source = " ".join(str(v) for v in brief.values())
@@ -152,7 +154,7 @@ def generate(profile_id, brief, channel="press_release", model=None, max_attempt
     system, user = build_prompt(profile, brief, channel)
     history, prompt = [], user
     for attempt in range(1, max_attempts + 1):
-        raw = llm.complete(system, prompt, model, temperature=temperature).strip()
+        raw = llm.complete(system, prompt, model, temperature=min(0.9, temperature + 0.15 * (attempt - 1))).strip()
         labels = CHANNELS[channel]["sections"]
         parts, missing = parse_sections(raw, channel) if labels else ({}, [])
         if missing:

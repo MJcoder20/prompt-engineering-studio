@@ -86,7 +86,12 @@ python run_engine.py --demo                 # three sample briefs
 python eval_engine.py                       # 12 fictional briefs x 3 runs
 ```
 
-**Evaluation** (Qwen 2.5 7B, 12 fictional briefs, 36 runs): first-attempt pass rate 58%, 86% after retries (mean 1.58 attempts). "Pass" means the automatic checks pass, not that the text is correct; a human must review every draft.
+**Evaluation** (Qwen 2.5 7B, 12 fictional briefs, 36 runs per configuration; "pass" means the automatic checks pass, not that the text is correct, so a human must review every draft):
+
+| | First-attempt pass | After retries | Mean attempts |
+|---|---|---|---|
+| Run 1 | 58% | 86% | 1.58 |
+| Run 2 (after fixing a conflicting instruction, clearer feedback, rising retry temperature) | 72% | 97% | 1.31 |
 
 ## Limitations
 

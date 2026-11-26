@@ -65,4 +65,12 @@ for bad_brief in ({"topic": "x"}, {}):
         g.generate("moh_palestine", bad_brief, model="stub"); raise SystemExit("should fail")
     except ValueError:
         pass
+# retries raise the temperature a little so a retry can differ from the previous draft
+temps = []
+def rec(system, user, model, max_tokens=1200, temperature=None):
+    temps.append(round(temperature, 2)); return BAD
+llm.complete = rec
+g.generate("moh_palestine", BRIEF, model="stub", temperature=0.3)
+assert temps == [0.3, 0.45, 0.6], temps
+assert "begin the first sentence" in " | ".join(g.check(GOOD.replace("وزارة الصحة الفلسطينية", "الوزارة"), profile, BRIEF, "press_release"))
 print("All engine tests passed.")
