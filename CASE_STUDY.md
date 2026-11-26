@@ -65,6 +65,26 @@ The strict prompt fixed calibration: error halved and bias near zero, and by ver
 - Feed the winning prompt into a content engine with retrieval over institution style guides.
 - Add checks for completion claims and weekdays against the supplied facts, and test a v6 that asks for a content headline separate from the institution name.
 
+## Content Engine: generate, check, revise
+
+I built a second module that drafts Arabic communications from a brief and an institution profile, runs every draft through the Studio's deterministic checks, and feeds the problems back to the model for up to three attempts. Every result is marked `draft_for_review`.
+
+**Evaluation:** 12 fictional briefs (several designed to tempt the model: sparse facts, a named person, a phone number, medical topics), 3 runs each, Qwen 2.5 7B.
+
+| | First-attempt pass | After retries | Mean attempts |
+|---|---|---|---|
+| Run 1 | 58% | 86% | 1.58 |
+| Run 2 | 72% | 97% | 1.31 |
+
+**What I found:**
+- The retry loop does most of the work: in run 2, 72% of drafts pass first time and 97% after retries.
+- One brief failed all 9 attempts in run 1 with three identical drafts. The cause was my own instruction: the social-post prompt said "key fact first", which conflicted with the check requiring the institution name. I fixed the instruction, made the feedback say exactly what to do, and raised the temperature slightly on retries. Social posts went from 56% to 100% after retries.
+- The checks caught the model inventing facts: praise words ("improving quality"), a medical claim ("protects against diseases") and a computed end date for a campaign that only gave a start date and a duration.
+- Structure rules in plain prose were unreliable for a 7B model (headlines and paragraph counts failed after three attempts). Asking for labeled sections that my code parses and assembles fixed it.
+- A check written for one phrasing missed the next: the Arabic definite article "ال" broke a term match until I switched to stems.
+
+**Limitations:** one run per configuration, and I changed three things at once between runs, so the gain isn't attributable to one change. The briefs are fictional and written by me. A pass means the automatic checks pass: small embellishments and grammar slips still get through, which is why a human must approve every draft.
+
 ## Responsible AI notes
 
 Outputs are drafts for human review; nothing is published automatically. The tool runs locally, which fits the data-sovereignty needs of government use. The main risk found was confident fabrication, which is why the checks target unsupported facts first.
